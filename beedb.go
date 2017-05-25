@@ -559,7 +559,7 @@ func (orm *Model) Delete(output interface{}) (int64, error) {
 	if orm.TableName == "" {
 		orm.TableName = getTableName(output)
 	}
-	id := results[strings.ToLower(orm.PrimaryKey)]
+	id := results[orm.PrimaryKey]
 	condition := fmt.Sprintf("%v%v%v='%v'", orm.QuoteIdentifier, strings.ToLower(orm.PrimaryKey), orm.QuoteIdentifier, id)
 	statement := fmt.Sprintf("DELETE FROM %v%v%v WHERE %v",
 		orm.QuoteIdentifier,
