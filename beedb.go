@@ -668,7 +668,7 @@ func (orm *Model) InitModel() {
 	orm.ParamStr = make([]interface{}, 0)
 	orm.OrderStr = ""
 	orm.ColumnStr = "*"
-	orm.PrimaryKey = "id"
+	orm.PrimaryKey = "Id"
 	orm.JoinStr = ""
 	orm.GroupByStr = ""
 	orm.HavingStr = ""
